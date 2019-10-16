@@ -1,0 +1,13 @@
+---
+applications:
+  - buildpacks:
+      - 'https://github.com/cloudfoundry/nodejs-buildpack.git'
+    command: 'node src/index.js'
+    env:
+      MOVIE_UI: true
+    instance: 1
+    memory: 256M
+    name: pb-busisols-movieui
+    no-route: false
+    random-route: false
+    stack: cflinuxfs3
